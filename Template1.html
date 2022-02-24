@@ -1,0 +1,84 @@
+<!--Template 1-->
+
+<!--@ToDo Limit Fields to only accpet proper inputs-->
+<!DOCTYPE html>
+<html>
+
+<head>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Template1_CSS.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <!--Billing Address-->
+                <div class="col-50">
+                    <h3>Billing Address</h3>
+                    <!--Full Name, Email, Address, City-->
+                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Philip Sherman">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="PSherman@Yardi.com">
+                    <label for="address"><i class="fa fa-address-card-o"></i> Address</label>
+                    <input type="text" id="address" name="address" placeholder="42 Wallaby Way">
+                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="city" name="city" placeholder="Sydney">
+
+                    <!--State, Zip-->
+                    <div class="row">
+                        <div class="col-50">
+                            <label for="state"> State</label>
+                            <input type="text" id="state" name="state" placeholder="New South Wales">
+                        </div>
+                        <div class="col-50">
+                            <label for="zip"> Zip</label>
+                            <input type="number" id="zip" name="zip" placeholder="2000">
+                        </div>
+                    </div>
+                </div>
+                <!--Payment Info-->
+                <div class="col-50">
+                    <h3>Payment</h3>
+                    <label for="card_names">Accepted Cards</label>
+                    <!--Accepted Cards-->
+                    <div class="icon-container">
+                        <i class="fa fa-cc-visa" style="color:navy"></i>
+                        <i class="fa fa-cc-amex" style="color:blue"></i>
+                        <i class="fa fa-cc-mastercard" style="color:red"></i>
+                        <i class="fa fa-cc-discover" style="color:orange"></i>
+                    </div>
+                    <!--Name on Card, CC#, Exp Month-->
+                    <label for="cname">Name on Card</label>
+                    <input type="text" id="cname" name="cname" placeholder="Philip Sherman">
+                    <label for="ccnumber">Credit Card Number</label>
+                    <input type="tel" id="ccnumber" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                        autocomplete="cc-number" maxlength="19" placeholder="1234-5678-9012-3456">
+                    <!--@todo make drop down-->
+                    <label for="expmonth">Expiry Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="May">
+
+                    <!--Exp Year, CVV-->
+                    <div class="row">
+                        <div class="col-50">
+                            <label for="expyear">Expiry Year</label>
+                            <input type="number" id="expyear" name="expyear" placeholder="2003">
+                        </div>
+                        <div class="col-50">
+                            <label for="cvv">CVV</label>
+                            <input type="number" id="cvv" name="cvv" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Billing == Shipping :checkmark:-->
+            <label>
+                <input type="checkbox" checked="checked" name="billing_shipping"> Shipping Address Same As Billing
+            </label>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+</body>
+
+</html>
